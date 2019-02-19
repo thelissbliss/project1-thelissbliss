@@ -1,9 +1,10 @@
 #pragma once
-
 #include <string>
+#include <vector>
 using std::string;
+using std::vector;
 
-// This is already done for you...
+// single item
 class Item {
 public:
     string name;
@@ -16,19 +17,22 @@ Item::Item(string new_name, int new_sellIn, int new_quality)
 : name(new_name), sellIn(new_sellIn), quality(new_quality) {
 }
 
-
-// This class is incomplete...
+// collection of items
 class GildedRose {
 private:
-    // Add something to hold at least 10 items
+    vector<Item> list;
 
 public:
-    GildedRose();
-    ~GildedRose();
+    size_t index;
 
-    size_t size() const;
-    Item& get(size_t);
-    void add(const Item&);
 
-    Item& operator[](size_t);
+    GildedRose() : list() { }
+    ~GildedRose(){ }
+
+    size_t size() const { return list.size(); }
+    Item& get(size_t index) { return list.at(index); }
+    void add(const Item &item) { list.push_back(item); }
+
+    Item& operator[](size_t index) { return get(index); }
+
 };
