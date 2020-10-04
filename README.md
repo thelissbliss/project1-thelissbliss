@@ -1,7 +1,7 @@
-# Project 1
-## CSUF CPSC 131, Spring 2019
+# GildedRose
+# Coursework project
 
-MUST EDIT WITH YOUR OWN NAME AND EMAIL IN THE SAME FORMAT
+Store inventory system.
 
 Credit:
-- Alyssa Bright alyssabright@csu.fullerton.edu
+- Alyssa Bright
